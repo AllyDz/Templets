@@ -533,6 +533,52 @@ Declaring a language is important for accessibility applications (screen readers
 			<h3>Where To Place Your JavaScript</h3>
 			<p>You can have an external JS file, or place your JS in the <' body '>' and/or the <' head '> tags.<br>In your HTML you need to place your JS file link or in-line scripts within <' script '> tags</p>
 			<p>External JavaScripts files have some advantages:<br>-Separates HTML and code<br>-Makes HTML and JavaScript easier to read and maintain<br>-Cached JavaScript files can speed up page loads</p>
+			<h3>JavaScript Display Possibilities</h3>
+			<table>
+				<tr>
+					<th>JS Display Possiblitities</th>
+					<th>Description</th>
+				</tr>
+				<tr>
+					<td>window.alert()</td>
+					<td>Writing into an alert box</td>
+				</tr>
+				<tr>
+					<td>document.write()</td>
+					<td>Writing into the HTML output</td>
+				</tr>
+				<tr>
+					<td>innerHTML</td>
+					<td>Writing into an HTML element</td>
+				</tr>
+				<tr>
+					<td>console.log()</td>
+					<td>Writing into the browser console</td>
+				</tr>
+			</table>
+			<p><strong>window.alert()</strong> is a window that pops up and displays the desired data.</p>
+			<button onclick="windowAlert()">Push Me!</button>
+			<script>
+				function windowAlert(){
+					alert("Hello! This is a window alert.");
+				}
+			</script>
+			<p><strong>document.write()</strong> is for testing purposes.</p>
+			<script>
+				document.write('"This is an example of a document write."');
+			</script>
+			<p>or this will work. (Note: This example will write over all of your HTML and return the document results only. To undo this refresh your page after. Or go <a href="http://www.w3schools.com/js/tryit.asp?filename=tryjs_output_write_over" target="_blank">Here</a> to see the example.)</p>
+			<button type="button" onclick="document.write('This is an example of a document write.')">Push Me!</button>
+			
+			<p><strong>innerHTML()</strong> The id defines the HTML element effected and the innerHTML defines the HTML content.</p>
+			<p id="innerHtml"></p>
+			<script>
+				document.getElementById("innerHtml").innerHTML = 'These are the results in the empty html p tag with the matching ids.';
+			</script>
+			<p><strong>console.log()</strong> helps you display data in browser. This is how I test my java script by injecting console.log('some text'), before and after the script to help you pint point where the scrip is braking/working (Note: You will have to open the inspector and view the results in the console).</p>
+			<script>
+				console.log('Yay! This script is working.');
+			</script>
 			<h3>Browser Objects Reference</h3>
 			<h3>HTML DOM Reference</h3>
 			<h3>HTML Element Objects Reference</h3>

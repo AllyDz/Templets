@@ -10,9 +10,17 @@ Declaring a language is important for accessibility applications (screen readers
 	<html>
 	<head>
 		<title>W3Schools Practice</title>
-		<link rel="stylesheet" type="text/css" href="your-style-file-here.css">
+		<link rel="stylesheet" type="text/css" href="screen.css">
 	</head>
 	<body>
+		<nav>
+			<ul>
+				<li><a href="#html-section">HTML</a></li>
+				<li><a href="#css-section">CSS</a></li>
+				<li><a href="#js-section">JS</a></li>
+				<li><a href="#php-section">PHP</a></li>
+			</ul>
+		</nav>
 		<div id="ref-section">
 			<h2>HTML Tools to have along the way</h2>
 			<p></p>
@@ -142,7 +150,8 @@ Declaring a language is important for accessibility applications (screen readers
 			</ul>
 		</div>
 		<hr><!-- This is a <hr> tag, allowing you to create a line with a single tag -->
-		<div id="html-css-section">
+		<section id="html-css-section">
+			<h1>HTML Section</h1>
 			<h3>HTML Styling</h3>
 			<p>This is how you would set up your css styles for your HTML elements '< tagname style="property:value;" >' for example '< body style="background-color:powderblue;" >'</p>
 			<h3>HTML Style Call Reference</h3>
@@ -325,8 +334,6 @@ Declaring a language is important for accessibility applications (screen readers
 			</table>
 			<p>More on web colors from W3Schools <a href="http://www.w3schools.com/html/html_colors.asp">Here</a></p>
 			<p>Color names supported by all browser types <a href="http://www.w3schools.com/colors/colors_names.asp">Here</a></p>
-		</div>
-		<hr><!-- This is a <hr> tag, allowing you to create a line with a single tag -->
 			<h3>HTML Styles - CSS</h3>
 			<table><!-- @todo -->
 				<tr>
@@ -467,7 +474,10 @@ Declaring a language is important for accessibility applications (screen readers
 			<h3>HTML5 Local Storage</h3>
 			<h3>More HTML5 Examples</h3>
 			<p>More on HTML at W3Schools<a href="hhttp://www.w3schools.com/html/html_examples.asp" target="_blank"> Here</a></p>
-		<div id="css-section">
+		</section>
+		<hr><!-- This is a <hr> tag, allowing you to create a line with a single tag -->
+		<section id="css-section">
+			<h1>CSS Section</h1>
 			<p>This is a simplified reference list for CSS pulled from W3Schools, for more details click<a href="http://www.w3schools.com/css/css_examples.asp" target="_blank"> Here</a></p>
 			<h3>CSS Syntax</h3>
 			<h3>CSS Backgrounds</h3>
@@ -521,9 +531,10 @@ Declaring a language is important for accessibility applications (screen readers
 			<h3>CSS3 Media Queries</h3>
 			<h3>CSS3 Media Queries - More Examples</h3>
 			<p>More on CSS at W3Schools<a href="http://www.w3schools.com/css/css_examples.asp" target="_blank"> Here</a></p>
-		</div>
+		</section>
 		<hr><!-- This is a <hr> tag, allowing you to create a line with a single tag -->
-		<div id="js-section">
+		<section id="js-section">
+			<h1>Java Script Section</h1>
 			<p>This is a simplified reference list for JS pulled from W3Schools, for more details click<a href="http://www.w3schools.com/jsref/default.asp" target="_blank"> Here</a></p>
 			<h3>JavaScript Reference</h3>
 			<p>Find the reference list <a href="http://www.w3schools.com/jsref/default.asp" target="_blank">Here</a></p>
@@ -629,15 +640,15 @@ Declaring a language is important for accessibility applications (screen readers
 				</tr>
 				<tr>
 					<td>var y = 6;</td>
-					<td>variable x will store the value of 6</td>
+					<td>variable y will store the value of 6</td>
 				</tr>
 				<tr>
 					<td>var z = x + y;</td>
-					<td>variable x will store the value of 11</td>
+					<td>variable z will store the value of 11</td>
 				</tr>
 				<tr>
 					<td>var carName = "Subi"</td>
-					<td>variable x will store the value of Subi</td>
+					<td>variable carName will store the value of Subi</td>
 				</tr>
 			</table>
 			<h3>JavaScript Identifiers</h3>
@@ -648,18 +659,55 @@ Declaring a language is important for accessibility applications (screen readers
 				<li>Names are case sensitive (SD, sD, Sd, and sd are different)</li>
 				<li>Reserved words like JavaScript keywords cannot be used as names.</li>
 			</ul>
+			<h3>JavaScript Keywords</h3>
 			<table>
 				<tr>
-					<th></th>
-					<th></th>
+					<th>Keyword</th>
+					<th>Description</th>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
+					<td>brake</td>
+					<td>Terminates a switch or a loop</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
+					<td>continue</td>
+					<td>Jumps out of a loop and starts at the top</td>
+				</tr>
+				<tr>
+					<td>debugger</td>
+					<td>Stops the execution of JavaScript, and calls (if available) the debugging function</td>
+				</tr>
+				<tr>
+					<td>do... while</td>
+					<td>Executes a block of statements, and repeats the block, while a condition is true</td>
+				</tr>
+				<tr>
+					<td>for</td>
+					<td>Marks a block of statements to be executed, as long as a condition is true</td>
+				</tr>
+				<tr>
+					<td>function</td>
+					<td>Declares a function</td>
+				</tr>
+				<tr>
+					<td>if... else</td>
+					<td>Marks a block of statements to be executed, depending on a condition</td>
+				</tr>
+				<tr>
+					<td>return</td>
+					<td>Exits a function</td>
+				</tr>
+				<tr>
+					<td>switch</td>
+					<td>Marks a block of statements to be executed, depending on different cases</td>
+				</tr>
+				<tr>
+					<td>try... catch</td>
+					<td>Implements error handling to a block of statements</td>
+				</tr>
+				<tr>
+					<td>var</td>
+					<td>Declares a variable</td>
 				</tr>
 			</table>
 			<h3>Browser Objects Reference</h3>
@@ -667,9 +715,10 @@ Declaring a language is important for accessibility applications (screen readers
 			<h3>HTML Element Objects Reference</h3>
 			<h3>Other Objects</h3>
 			<p>More on JS at W3Schools<a href="http://www.w3schools.com/jsref/default.asp" target="_blank">Here</a></p>
-		</div>
+		</section>
 		<hr><!-- This is a <hr> tag, allowing you to create a line with a single tag -->
-		<div id="php-section">
+		<sectionid="php-section">
+		<h1>PHP Section</h1>
 			<p>This is a simplified reference list for PHP pulled from W3Schools, for more details click<a href="http://www.w3schools.com/php/default.asp" target="_blank"> Here</a></p>
 			<h3>Array functions</h3>
 			<h3>Calendar functions</h3>
@@ -690,7 +739,7 @@ Declaring a language is important for accessibility applications (screen readers
 			<h3>XML Parser functions</h3>
 			<h3>Zip functions</h3>
 			<p>More on PHP at W3Schools<a href="http://www.w3schools.com/php/default.asp"> Here</a></p>
-		</div>
+		</section> 
 		<hr><!-- This is a <hr> tag, allowing you to create a line with a single tag -->
 		<footer></footer>
 	</body>

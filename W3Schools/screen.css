@@ -1,0 +1,21 @@
+/*Begining of CSS*/
+*{
+
+}
+/************************
+/		NAV Styles 		/
+************************/
+nav{
+	/*display: inline-block;*/
+}
+nav ul{
+	display: inline-block;
+	width: 100%;
+	text-decoration: none;
+}
+nav li{
+	list-style: none;
+	color: green;
+	float: left;
+	margin-right: 3%;
+}

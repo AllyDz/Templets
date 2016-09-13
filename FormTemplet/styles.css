@@ -34,27 +34,27 @@ ul li, ol li {
 /******************************
 		TEXT STYLES
 /*******************************/
+h1, h2, h3, h4, h5, h6{
+	color: #003329;
+	letter-spacing: .1em;
+}
 h1{
-	color: darkblue;
 	font-size: 3em;
 }
 h2{
-
+	font-size: 2.5em;
 }
 h3 {
-	color: darkblue;
 	font-size: 2em;
 }
 h4{
 
 }
 h5{
-	color: #ccac00;
 	font-size: 1.9em;
 	margin: 0px;
 }
 h6{
-	color: #ccac00;
 	font-size: 7em;
 	margin: 0px;
 }
@@ -90,10 +90,12 @@ fieldset {
 
 }
 label {
+	color: #008080;
 	margin: 0 15px;
 	padding-bottom: 5px;
 	font-weight: 600;
 	font-size: 1.5em;
+	vertical-align: middle;
 }
 span {
 	display: inline-block;
@@ -105,6 +107,7 @@ span {
 	font-size: 1.2em;
 	text-align: left;
 	color: gray;
+	vertical-align: middle;
 }
 .first-square{
 	width: 100%;
@@ -116,6 +119,28 @@ span {
 	background-color:#f5f5dc;
 	height: 450px;
 	margin: 7%;
+}
+/******************************
+		FLASH CARD STYLES
+/*******************************/
+.card-container{
+	min-height: 200px;
+	height: 200px;
+	width:100%;
+	background-color: #cec8ca;
+	border-radius: 25px;
+}
+.card-container p{
+	text-align: center;
+    padding: 40px 20px 0;
+    /*vertical-align: 50%;*/
+}
+.show-answer{
+	text-align: center;
+	margin: 20px 0px;
+}
+.show{
+	display: none;
 }
 /******************************
 		FOOTER STYLES

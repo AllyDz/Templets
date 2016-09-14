@@ -139,8 +139,11 @@ span {
 	text-align: center;
 	margin: 20px 0px;
 }
-.show{
+.card-definition{
 	display: none;
+}
+.card-definition.show{
+	display: block;
 }
 /******************************
 		FOOTER STYLES

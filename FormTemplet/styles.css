@@ -1,3 +1,4 @@
+/* @todo animate the transition of showing & hiding .toggleClass stuffs*/
 /******************************
 		HEADER STYLES
 /*******************************/
@@ -135,14 +136,21 @@ span {
     padding: 40px 20px 0;
     /*vertical-align: 50%;*/
 }
+.show{
+	-webkit-transition-timeing-function:ease;
+	transition-timing-function: ease;
+	min-height: 0px;
+	max-height: auto;
+	transition: height 3s;
+}
 .show-answer{
 	text-align: center;
 	margin: 20px 0px;
 }
-.card-definition{
+.card-definition, .step2.show, .step3.show, .play.show{
 	display: none;
 }
-.card-definition.show{
+.card-definition.show, .step2, .step3, .play{
 	display: block;
 }
 /******************************

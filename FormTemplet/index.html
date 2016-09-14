@@ -17,72 +17,87 @@
 		<header><span class="logo">SD</span>Flash Card Maker By SD</header>
 		<div class="container">
 			<div class="registration-style-50 registration-style-100">
-				<section id="step1">
-					<h1>Step 1:</h1>
-					<h3>Make Your Flash Cards</h3>
-					<p>Fill out the following form to create your very own flash cards.</p>
+				<section id="enter">
+<!-- 					<h1>Step 1:</h1> -->
+					<h2>Make Your Unique ID</h2>
+					<p>Fill out the following form information to get started</p>
 						<fieldset class="half-width card-info">
 
-							<input type="hidden" name="data[id]" value="'.$sd_flash_cards['id'].'">
-							<div class="formdiv"><label>Email</label><span><?php'.$sd_flash_cards['email'].'?></span></div>
-							<div class="formdiv"><label>Flash Card Title</label><span><?php'.$sd_flash_cards['flash_card'].'?></span></div>
-							<div class="formdiv"><label>Term Side</label><span><?php'.$sd_flash_cards['term_side'].'?></span></div> 
-							<div class="formdiv"><label>Definition Side</label><span><?php'.$sd_flash_cards['definition_side'].'?></span></div>	<button type="button">SAVE</button> 					
-								<?php $sql = "INSERT INTO sd_flash_cards (
+							<input type="hidden" name="data[id]" value="'.$sdfcd_users['id'].'">
+							<div class="formdiv"><label>Email</label><span><?php'.$sdfcd_users['email'].'?></span></div>
+							<div class="formdiv"><label>Flash Card Deck</label><span><?php'.$sdfcd_users['password'].'?></span></div>
+							 					
+								<?php $sql = "INSERT INTO sdfcd_users (
 						            `id`,
 						            `email`,
-						            `flash_card`,
-						            `term_side`,
-						            `definition_side`,
-						            `created_date`,`modified_date`,`modified_by`
+						            `password`,						
 						          ) VALUES (
 						            '".$id."',
 						            '".$email."',
-						            '".$flash_card."',
-						            NOW(),NOW(),
-						            '".$_SESSION['sd_flash_cards']['id']."')"; 
+						            '".$password."',
+						            '".$_SESSION['sdfcd_users']['id']."')"; 
 					            ?>
+					            <!-- on click it will show the respective page items (view or create deck) -->
 			           	</fieldset>
 			    </section>
-			    <section id="step2">
-			        <h1>Step 2:</h1>
-			        <h3>Retrieve Your Flash Cards</h3>
-			        <p>Enter your email to retrieve and select your flash cards to begin</p>
+			    <section id="options">
+			    	<h2>What's Your Move</h2>
+			    	<div class="">
+			    		<button id="creat-deck">New Deck</button>
+						<button id="pick-deck">View Deck</button>
+					</div>
+			    </section>
+			    <section id="step2" class="step2 show">
+			        <!-- <h1>Step 2:</h1> -->
+			        <h2>Create Your Flash Card Deck</h2>
+			        <p>Start building your decks</p>
 						<fieldset class="half-width retreive-cards">
-							<input type="hidden" name="data[id]" value="'.$sd_flash_cards['id'].'">
-							<div class="formdiv"><label>Email</label><span><?php'.$handel['email'].'?></span></div>
-							<div class="formdiv"><label>Password</label><span><?php'.$handel['password'].'?></span></div>
-							<div class="formdiv"><label>Password</label><span><?php'.$handel['password'].'?></span></div>
-							<button type="button">RETREIVE</button>
+							<input type="hidden" name="data[id]" value="'.$sdfcd_fcdeck['id'].'">
+							<input type="hidden" name="data[fcd_id]" value="'.$sdfcd_fcdeck['fcd_id'].'">
+							<div class="formdiv"><label>Deck Name</label><span><?php'.$sd_flash_cards['deck_name'].'?></span></div>
+						<!-- STOPED working on tables, matching db -->
+							<!-- work on these btns -->
+							<button type="button">Save</button>
+							<button type="button">Edit</button>
+							<!-- <button type="button">Retrieve</button> -->
 						</fieldset>
-						<?php $sql ="SELECT * FROM sd_flash_cards (
+						<?php $sql ="SELECT * FROM $sdfcd_fcdeck (
 							) VALUES (
 							)";
 						?>
 				</section>
-				<section id="setp3">
-					<h1>Step 3:</h1>
-					<h3>Pick Your Flash Card Decks</h3>
-					<p>Pick from your flash card deck(s) to study</p>
+				<section id="step3" class="step3 show"> <!-- show -->
+					<!-- <h1>Step 3:</h1> -->
+					<h2>Pick Your Flash Card Decks</h2>
+					<p>You can pick one or more decks to study at a time.</p>
 					<form class="half-width">
+						<button id="addcards" type="button">Add Card</button><!-- when clicked pop term and definition inputs, do not allow to pop if no deck is picked -->
+						<button id="play"type="button">Lets Play</button>
 						<?php 
 							foreach ($sd_flash_cards['flash_card'] as .'$key'.) { 
 						?>
-							<div class="formdiv"><label><input type="radio" name="'.$sd_flash_cards['flash_card'].'" value="flash_card"></label><span><?php'.$sd_flash_cards['flash_card'].'?></span></div><br>
+							<div class="formdiv"><label><input type="radio" name="'.$sd_flash_cards['flash_card'].'" value="flash_card"></label><span><?php'.$sd_flash_cards['flash_card'].'?></span></div>
+							<div class="formdiv show"><label>Term</label><span><?php'.$sd_flash_cards['term'].'?></span></div>
+							<div class="formdiv show"><label>Definition</label><span><?php'.$sd_flash_cards['definition'].'?></span></div>
+							<br>
 						<?php } ?>
-						<button type="button">PLAY</button>
 					</form>
 				</section>
 				<div class="clear"></div>
-				<section id="flash-cards">
-					<h1>Your Custom Flash Card Decks</h1>
-					<h3>You can pick one or more decks to study at a time.</h3>
+				<section id="inplay" class="play show">
+					<!-- <h1></h1> -->
+					<h2>Flash Cards Go</h2>
 					<div id="card-container" class="card-container">
 						<p id="term" class="card-term">This is a test term</p>
-						<p id="definition" class="card-definition"></p>
+						<p id="definition" class="card-definition">42</p>
 						<div class="show-answer">
-							<button id="btn">Show Answer</button>
+							<button id="answer">Show Answer</button>
 						</div>
+					</div>
+					<div class="">
+						<button id="previous" type="button">Previous Card</button>
+						<button id="next" type="button">Next Card</button>
+						<button id="menu" type="button">Back to Menu</button>
 					</div>
 				</section>
 				</div>

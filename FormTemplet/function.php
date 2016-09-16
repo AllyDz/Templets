@@ -8,7 +8,7 @@
 	$success = '';
 	$page_url = fileName_hook_pull_requested_page_url('fileName from hooks page');
 	
-	echo ("Hello Bitch");
+	echo ("Hello World");
 	$c = array();
 
 	$c[] ='<head><title>registration</title></head>

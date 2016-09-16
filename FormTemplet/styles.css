@@ -136,7 +136,7 @@ span {
     padding: 40px 20px 0;
     /*vertical-align: 50%;*/
 }
-.show{
+#show{
 	-webkit-transition-timeing-function:ease;
 	transition-timing-function: ease;
 	min-height: 0px;

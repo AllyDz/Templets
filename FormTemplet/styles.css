@@ -147,12 +147,12 @@ span {
 	text-align: center;
 	margin: 20px 0px;
 }
-.card-definition, .step2.show, .step3.show, .play.show{
-	display: none;
-}
-.card-definition.show, .step2, .step3, .play{
-	display: block;
-}
+/*.card-definition, .step2.show, .step3.show, .play.show{*/
+/*	display: none;*/
+/*}*/
+/*.card-definition.show, .step2, .step3, .play{*/
+/*	display: block;*/
+/*}*/
 /******************************
 		FOOTER STYLES
 /*******************************/

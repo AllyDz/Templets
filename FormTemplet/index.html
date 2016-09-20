@@ -14,33 +14,35 @@
 	</head>
 
 	<body>
-		<header><span class="logo">SD</span>Flash Card Maker By SD</header>
+		<header>F lash Card Maker</header>
 		<div class="container">
 			<div class="registration-style-50 registration-style-100">
 				<section id="enter">
 <!-- 					<h1>Step 1:</h1> -->
 					<h2>Make Your Unique ID</h2>
 					<p>Fill out the following form information to get started</p>
-						<fieldset class="half-width card-info">
+						<div class="form-container">
+							<fieldset class="half-width card-info">
 
-							<input type="hidden" name="data[id]" value="'.$sdfcd_users['id'].'">
-							<div class="formdiv"><label>Email</label><input><?php'.$sdfcd_users['email'].'?></input></div>
-							<div class="formdiv"><label>Password</label><input><?php'.$sdfcd_users['password'].'?></input></div>
-							<button id="save" class="btn" type="button">Save</button>
-							<button id="enter" class="btn" type="button">Enter</button>
-							 		<!-- create and if statement that if save is hit to save data, if return is hit go to flash card deck... include success and error messages -->			
-								<?php $sql = "INSERT INTO sdfcd_users (
-						            `id`,
-						            `email`,
-						            `password`,						
-						          ) VALUES (
-						            '".$id."',
-						            '".$email."',
-						            '".$password."',
-						            '".$_SESSION['sdfcd_users']['id']."')"; 
-					            ?>
-					            <!-- on click it will show the respective page items (view or create deck) -->
-			           	</fieldset>
+								<input type="hidden" name="data[id]" value="'.$sdfcd_users['id'].'">
+								<div class="formdiv"><label>Email</label><input><?php'.$sdfcd_users['email'].'?></input></div>
+								<div class="formdiv"><label>Password</label><input><?php'.$sdfcd_users['password'].'?></input></div>
+								<button id="save" class="btn" type="button">Save</button>
+								<button id="enter" class="btn" type="button">Enter</button>
+								 		<!-- create and if statement that if save is hit to save data, if return is hit go to flash card deck... include success and error messages -->			
+									<?php $sql = "INSERT INTO sdfcd_users (
+							            `id`,
+							            `email`,
+							            `password`,						
+							          ) VALUES (
+							            '".$id."',
+							            '".$email."',
+							            '".$password."',
+							            '".$_SESSION['sdfcd_users']['id']."')"; 
+						            ?>
+						            <!-- on click it will show the respective page items (view or create deck) -->
+				           	</fieldset>
+				        </div>
 			    </section>
 			    <section id="options">
 			    	<h2>What's Your Move</h2>

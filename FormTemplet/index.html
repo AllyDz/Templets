@@ -20,15 +20,17 @@
 				<section id="enter">
 <!-- 					<h1>Step 1:</h1> -->
 					<h2>Make Your Unique ID</h2>
-					<p>Fill out the following form information to get started</p>
+					<p>Fill out the following form information to get started.</p>
 						<div class="form-container">
 							<fieldset class="half-width card-info">
 
 								<input type="hidden" name="data[id]" value="'.$sdfcd_users['id'].'">
 								<div class="formdiv"><label>Email</label><input><?php'.$sdfcd_users['email'].'?></input></div>
 								<div class="formdiv"><label>Password</label><input><?php'.$sdfcd_users['password'].'?></input></div>
-								<button id="save" class="btn" type="button">Save</button>
-								<button id="enter" class="btn" type="button">Enter</button>
+								<div class="btn-option">
+									<button id="save" class="btn" type="button">Save</button>
+									<button id="enter" class="btn" type="button">Enter</button>
+								</div>
 								 		<!-- create and if statement that if save is hit to save data, if return is hit go to flash card deck... include success and error messages -->			
 									<?php $sql = "INSERT INTO sdfcd_users (
 							            `id`,
@@ -46,59 +48,71 @@
 			    </section>
 			    <section id="options">
 			    	<h2>What's Your Move</h2>
-			    	<div class="">
-			    		<button class="btn" id="creat-deck">New Deck</button>
-						<button class="btn" id="pick-deck">View Deck</button>
+			    	<p>Do you want to make a new flash card deck or view a current deck?</p>
+			    	<div class="form-container">
+			    		<div class="btn-option">
+				    		<button class="btn" id="creat-deck">New Deck</button>
+							<button class="btn" id="pick-deck">View Deck</button>
+						</div>
 					</div>
 			    </section>
 			    <section id="step2" class="step2 show">
 			        <!-- <h1>Step 2:</h1> -->
 			        <h2>Create Your Flash Card Deck</h2>
 			        <p>Start building your decks</p>
-						<fieldset class="half-width retreive-cards">
-							<input type="hidden" name="data[id]" value="'.$sdfcd_fcdeck['id'].'">
-							<input type="hidden" name="data[fcd_id]" value="'.$sdfcd_fcdeck['fcd_id'].'">
-							<div class="formdiv"><label>Deck Name</label><span><?php'.$sd_flash_cards['deck_name'].'?></span></div>
-						<!-- STOPED working on tables, matching db -->
-							<!-- work on these btns -->
-							<button type="button">Save</button>
-							<button type="button">Edit</button>
-							<button type="button">Decks</button>
-						</fieldset>
-						<?php $sql ="SELECT * FROM $sdfcd_fcdeck (
-							) VALUES (
-							)";
-						?>
+			        	<div class="form-container">
+							<fieldset class="half-width retreive-cards">
+								<input type="hidden" name="data[id]" value="'.$sdfcd_fcdeck['id'].'">
+								<input type="hidden" name="data[fcd_id]" value="'.$sdfcd_fcdeck['fcd_id'].'">
+								<div class="formdiv"><label>Deck Name</label><span>Your Deck Name Here<?php'.$sd_flash_cards['deck_name'].'?></span></div>
+							<!-- STOPED working on tables, matching db -->
+								<!-- work on these btns -->
+								<div class="btn-option">
+									<button type="button">Save</button>
+									<button type="button">Edit</button>
+									<button type="button">Decks</button>
+								</div>
+							</fieldset>
+							<?php $sql ="SELECT * FROM $sdfcd_fcdeck (
+								) VALUES (
+								)";
+							?>
+						</div>
 				</section>
 				<section id="step3" class="step3 show"> <!-- show -->
 					<!-- <h1>Step 3:</h1> -->
 					<h2>Pick Your Flash Card Decks</h2>
 					<p>You can pick one or more decks to study at a time.</p>
-					<form class="half-width">
-						<button id="addcards" type="button">Add Card</button><!-- when clicked pop term and definition inputs, do not allow to pop if no deck is picked -->
-						<button id="play"type="button">Lets Play</button>
-						<?php 
-							foreach ($sd_flash_cards['flash_card'] as .'$key'.) { 
-						?>
-							<div class="formdiv"><label><input type="radio" name="'.$sd_flash_cards['flash_card'].'" value="flash_card"></label><span><?php'.$sd_flash_cards['flash_card'].'?></span></div>
-							<div class="formdiv show"><label>Term</label><span><?php'.$sd_flash_cards['term'].'?></span></div>
-							<div class="formdiv show"><label>Definition</label><span><?php'.$sd_flash_cards['definition'].'?></span></div>
-							<br>
-						<?php } ?>
-					</form>
+					<div class="form-container">
+						<form class="half-width">
+							<div class="btn-option">
+								<button id="addcards" type="button">Add Card</button><!-- when clicked pop term and definition inputs, do not allow to pop if no deck is picked -->
+								<button id="play"type="button">Lets Play</button>
+							</div>
+							<?php 
+								foreach ($sd_flash_cards['flash_card'] as .'$key'.) { 
+							?>
+								<div class="formdiv"><label><input type="radio" name="'.$sd_flash_cards['flash_card'].'" value="flash_card"></label><span><?php'.$sd_flash_cards['flash_card'].'?></span></div>
+								<div class="formdiv show"><label>Term</label><span><?php'.$sd_flash_cards['term'].'?></span></div>
+								<div class="formdiv show"><label>Definition</label><span><?php'.$sd_flash_cards['definition'].'?></span></div>
+								<br>
+							<?php } ?>
+						</form>
+					</div>
 				</section>
 				<div class="clear"></div>
 				<section id="inplay" class="play show">
 					<!-- <h1></h1> -->
 					<h2>Flash Cards Go</h2>
+					<p></p>
 					<div id="card-container" class="card-container">
 						<p id="term" class="card-term">This is a test term</p>
 						<p id="definition" class="card-definition">42</p>
-						<div class="show-answer">
+						<div class="show-answer btn-option">
 							<button id="answer">Show Answer</button>
 						</div>
 					</div>
-					<div class="">
+					<div class="btn-option">
 						<button id="previous" type="button">Previous Card</button>
 						<button id="next" type="button">Next Card</button>
 						<button id="menu" type="button">Back to Menu</button>

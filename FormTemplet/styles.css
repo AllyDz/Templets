@@ -70,7 +70,7 @@ h6{
 p{
 	color: 515353;
 	font-size: 14px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 .kerning{
 	padding: 0 15px;
@@ -89,7 +89,7 @@ p{
 	float: right;
 	display: inline-block;
 	border: none;
-	margin: 0 20%;
+	margin: 40px 20% 0;
 	text-align: right;
 }
 .formdiv {
@@ -99,21 +99,28 @@ p{
 fieldset {
 
 }
-label {
+label, span {
 	color: #515353;
     margin-bottom: 10px;
     font-weight: 600;
     float: left;
     font-size: 14px;
 }
-input {
+input{
 	border: 3px solid #e0e0e0;
     width: 120%;
     height: 50px;
     font-size: 14px;
     text-align: left;
     color: #9da2a4;
-    margin-bottom: 45px;
+    margin-bottom: 30px;
+}
+input:active{
+	border-color: #515353;
+}
+span{
+	margin-left: 10px;
+	color: #80c6ca;
 }
 .first-square{
 	width: 100%;
@@ -144,20 +151,30 @@ button{
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
     font-size: 14px;
-    border: 3px solid #80c6ca;
-    color: #80c6ca;
+    border: 3px solid #1b898f;
+    color: #1b898f;
     background: white;
+}
+button:hover{
+	border-color: #e0e0e0;
+	color: #e0e0e0;
+
+}
+.btn-option{
+	margin: 0 15%;
 }
 /******************************
 		FLASH CARD STYLES
 /*******************************/
 .card-container{
-	min-height: 435px;
-    width: 750px;
+	max-height: 435px;
+    max-width: 750px;
     border: 0px solid #cec8ca;
     border-radius: 10px;
-    margin: 0 15% 10%;
+    margin: 0 15% 5%;
     background: #fff;
+    width: 750px;
+    height: 435px;
 }
 .card-container p{
 	text-align: center;

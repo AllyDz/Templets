@@ -9,7 +9,7 @@
 	<head>
 		<title>SD Flash Card Maker</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><!-- If this is not called before your JS file your file will though errors. -->
 		<script src="global.js"></script>
 	</head>
 
@@ -24,9 +24,11 @@
 						<fieldset class="half-width card-info">
 
 							<input type="hidden" name="data[id]" value="'.$sdfcd_users['id'].'">
-							<div class="formdiv"><label>Email</label><span><?php'.$sdfcd_users['email'].'?></span></div>
-							<div class="formdiv"><label>Flash Card Deck</label><span><?php'.$sdfcd_users['password'].'?></span></div>
-							 					
+							<div class="formdiv"><label>Email</label><input><?php'.$sdfcd_users['email'].'?></input></div>
+							<div class="formdiv"><label>Password</label><input><?php'.$sdfcd_users['password'].'?></input></div>
+							<button id="save" class="btn" type="button">Save</button>
+							<button id="enter" class="btn" type="button">Enter</button>
+							 		<!-- create and if statement that if save is hit to save data, if return is hit go to flash card deck... include success and error messages -->			
 								<?php $sql = "INSERT INTO sdfcd_users (
 						            `id`,
 						            `email`,
@@ -43,8 +45,8 @@
 			    <section id="options">
 			    	<h2>What's Your Move</h2>
 			    	<div class="">
-			    		<button id="creat-deck">New Deck</button>
-						<button id="pick-deck">View Deck</button>
+			    		<button class="btn" id="creat-deck">New Deck</button>
+						<button class="btn" id="pick-deck">View Deck</button>
 					</div>
 			    </section>
 			    <section id="step2" class="step2 show">

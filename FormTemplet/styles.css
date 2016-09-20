@@ -98,7 +98,7 @@ label {
 	font-size: 1.5em;
 	vertical-align: middle;
 }
-span {
+input {
 	display: inline-block;
 	border: 1px solid gray;
 	padding: 5px;
@@ -128,8 +128,9 @@ span {
 	min-height: 200px;
 	height: 200px;
 	width:100%;
-	background-color: #cec8ca;
+	border: 1px solid #cec8ca;
 	border-radius: 25px;
+	margin-bottom: 15px;
 }
 .card-container p{
 	text-align: center;
@@ -147,12 +148,21 @@ span {
 	text-align: center;
 	margin: 20px 0px;
 }
+<<<<<<< Updated upstream
 /*.card-definition, .step2.show, .step3.show, .play.show{*/
 /*	display: none;*/
 /*}*/
 /*.card-definition.show, .step2, .step3, .play{*/
 /*	display: block;*/
 /*}*/
+=======
+/*.card-definition, .step2.show, .step3.show, .play.show{
+	display: none;
+}
+.card-definition.show, .step2, .step3, .play{
+	display: block;
+}*/
+>>>>>>> Stashed changes
 /******************************
 		FOOTER STYLES
 /*******************************/

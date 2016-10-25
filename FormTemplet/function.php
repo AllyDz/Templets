@@ -15,4 +15,11 @@
 				<body><div class="registration-style-50-50 registration-style-100"
 					<h3>Registration</h3>
 	</body>';
+//$userName = ['$user_name'];
+	// conditions: assign value to variable with ? (turanery operator), you can also use switch statement
+		// this can be used to check for the users name and return it in the HTML
+	// swith($userName){
+		//case "$userName";
+			//print "Hello" " .$userName.";
+	//}
 ?>

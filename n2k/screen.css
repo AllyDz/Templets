@@ -1,0 +1,91 @@
+*{
+    font-family:futura;
+}
+#logo > div{
+    margin:50px 0 0;
+    float:left;
+} 
+span{
+    font-size:30px;
+    padding: 40px 25px;
+    border:3px solid black;
+    border-radius:100%;
+}
+span:hover{
+    color:gray;
+    border:3px solid gray;
+}
+nav{
+    display:block;
+    width:50%;
+    float:right;
+    margin:33px 0 0;
+}
+ul{
+    display:inline-block;
+/*     width:80%; */
+    
+}
+li{
+    display:inline-block;
+    margin:10px;
+    folat:right;
+}
+.btn{
+    background:black;
+    border-radius:5px;
+    padding: 5px 25px;
+    color:white;
+}
+.b2n1:hover{
+    background:orange;
+}
+.b2n2:hover{
+    background:blue;
+}
+.b2n3:hover{
+    background:green;
+}
+.b2n4:hover{
+    background:brown;
+}
+.logo1{
+    color:orange;
+    border:3px solid orange;
+}
+.logo2{
+    color:blue;
+    border:3px solid blue;
+}
+.logo3{
+    color:green;
+    border:3px solid green;
+}
+.logo4{
+    color:brown;
+    border:3px solid brown;
+}
+.logohome{
+    color:black;
+    border:3px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

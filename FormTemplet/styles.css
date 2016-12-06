@@ -117,6 +117,7 @@ input{
 }
 input:active{
 	border-color: #515353;
+	transition: 0.3s ease;
 }
 span{
 	margin-left: 10px;
@@ -154,6 +155,7 @@ button{
     border: 3px solid #1b898f;
     color: #1b898f;
     background: white;
+    transition: 0.3s ease;
 }
 button:hover{
 	border-color: #e0e0e0;

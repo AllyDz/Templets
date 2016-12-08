@@ -9,7 +9,7 @@
 	<head>
 		<title>SD Flash Card Maker</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script><!-- If this is not called before your JS file your file will though errors. -->
+		<script src='http://code.jquery.com/jquery-latest.min.js'></script><!-- If this is not called before your JS file your file will though errors. -->
 		<script src="global.js"></script>
 	</head>
 
@@ -33,7 +33,7 @@
 								<div class="formdiv"><label>Password</label><input><?php'.$sdfcd_users['password'].'?></input></div>
 								<div class="btn-option">
 									<button id="save" class="btn" type="button">Save</button>
-									<button id="enter" class="btn" type="button">Enter</button>
+									<button id="submit" class="btn" type="button">Enter</button>
 								</div>
 								 		<!-- create and if statement that if save is hit to save data, if return is hit go to flash card deck... include success and error messages -->			
 									<?php $sql = "INSERT INTO sdfcd_users (
@@ -50,7 +50,7 @@
 				           	</fieldset>
 				        </div>
 			    </section>
-			    <section id="options">
+			    <section id="options" class="options ">
 			    	<h2>What's Your Move</h2>
 			    	<p>Do you want to make a new flash card deck or view a current deck?</p>
 			    	<div class="form-container">
@@ -60,7 +60,7 @@
 						</div>
 					</div>
 			    </section>
-			    <section id="step2" class="step2 show">
+			    <section id="step2" class="step2 ">
 			        <!-- <h1>Step 2:</h1> -->
 			        <h2>Create Your Flash Card Deck</h2>
 			        <p>Start building your decks</p>
@@ -83,7 +83,7 @@
 							?>
 						</div>
 				</section>
-				<section id="step3" class="step3 show"> <!-- show -->
+				<section id="step3" class="step3 "> <!-- show -->
 					<!-- <h1>Step 3:</h1> -->
 					<h2>Pick Your Flash Card Decks</h2>
 					<p>You can pick one or more decks to study at a time.</p>
@@ -105,7 +105,7 @@
 					</div>
 				</section>
 				<div class="clear"></div>
-				<section id="inplay" class="play show">
+				<section id="inplay" class="play ">
 					<!-- <h1></h1> -->
 					<h2>Flash Cards Go</h2>
 					<p></p>

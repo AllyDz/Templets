@@ -183,24 +183,29 @@ button:hover{
     padding: 40px 20px 0;
     /*vertical-align: 50%;*/
 }
-#show{
+/*#show{
+	-webkit-transition-timeing-function:ease;
+	transition-timing-function: ease;
+	min-height: 0px;
+	max-height: auto;
+	transition: height 3s;
+}*/
+.show-answer{
+	text-align: center;
+	margin: 20px 0px;
+}
+<<<<<<< Updated upstream
+.options, .card-definition, .step2, .step3, .play{
+	display: none;
+}
+.options.show, .card-definition.show, .step2.show, .step3.show, .play.show{
+	display: block;
 	-webkit-transition-timeing-function:ease;
 	transition-timing-function: ease;
 	min-height: 0px;
 	max-height: auto;
 	transition: height 3s;
 }
-.show-answer{
-	text-align: center;
-	margin: 20px 0px;
-}
-<<<<<<< Updated upstream
-/*.card-definition, .step2.show, .step3.show, .play.show{*/
-/*	display: none;*/
-/*}*/
-/*.card-definition.show, .step2, .step3, .play{*/
-/*	display: block;*/
-/*}*/
 =======
 /*.card-definition, .step2.show, .step3.show, .play.show{
 	display: none;

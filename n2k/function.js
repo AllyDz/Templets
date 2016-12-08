@@ -10,7 +10,7 @@ var btn1 = document.getElementById("btn1");
 var btn2 = document.getElementById("btn2");
 var btn3 = document.getElementById("btn3");
 var btn4 = document.getElementById("btn4");
-var btn = document.getElementById("btn1", "btn2", "btn3", "btn4");
+var btn = (btn1, btn2, btn3, btn4);
 btn.onclick = function myFunction() {
     alert("you clicked");
     if (btn == btn1){

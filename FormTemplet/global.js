@@ -1,11 +1,11 @@
 // @todo add the other id's that will be apart of the .toggleClass
 // @todo consolidate the button action to one function
 // @todo Learning jQuery
-var FCD = {
-	init function(){
-		FDC.setFunctions //to happen on page load. This also helps to cut back on global selectors
-	}
-}
+// var FCD = {
+// 	init function(){
+// 		FDC.setFunctions //to happen on page load. This also helps to cut back on global selectors
+// 	}
+// }
 
 jQuery(document).ready(function(){
 	
@@ -21,7 +21,13 @@ jQuery(document).ready(function(){
 	// if/else a class then do the following
 	// when event happens toggle class show/hide
 
-	//OMGOSH this would be a lot of lines script doing it the below way.
+	//OMGOSH this would be a lot of lines script doing it this way.
+	jQuery('#save').click(function() {
+		jQuery('#options').toggleClass('show');
+	});
+	jQuery('#submit').click(function() {
+		jQuery('#options').toggleClass('show');
+	});
 	jQuery('#answer').click(function() {
 		jQuery('#definition').toggleClass('show');
 	});

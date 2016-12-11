@@ -7,7 +7,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SD Flash Card Maker</title>
+		<title>Flash Card Maker</title>
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<script src='http://code.jquery.com/jquery-latest.min.js'></script><!-- If this is not called before your JS file your file will though errors. -->
 		<script src="global.js"></script>
@@ -18,7 +18,7 @@
 
  <!--div> <p>Hello <?php $userName = "Allyson"; echo $userName; ?> </p></div-->
 
-		<header>F lash Card Maker</header>
+		<header>Flash Card Maker</header>
 		<div class="container">
 			<div class="registration-style-50 registration-style-100">
 				<section id="enter">
@@ -32,8 +32,8 @@
 								<div class="formdiv"><label>Email</label><input><?php'.$sdfcd_users['email'].'?></input></div>
 								<div class="formdiv"><label>Password</label><input><?php'.$sdfcd_users['password'].'?></input></div>
 								<div class="btn-option">
-									<button id="save" class="btn" type="button">Save</button>
-									<button id="submit" class="btn" type="button">Enter</button>
+									<button id="save" class="btn" type="button">Create</button>
+									<button id="submit" class="btn" type="button">Log In</button>
 								</div>
 								 		<!-- create and if statement that if save is hit to save data, if return is hit go to flash card deck... include success and error messages -->			
 									<?php $sql = "INSERT INTO sdfcd_users (
@@ -50,7 +50,7 @@
 				           	</fieldset>
 				        </div>
 			    </section>
-			    <section id="options" class="options ">
+			    <section id="options" class="options show">
 			    	<h2>What's Your Move</h2>
 			    	<p>Do you want to make a new flash card deck or view a current deck?</p>
 			    	<div class="form-container">
@@ -60,7 +60,7 @@
 						</div>
 					</div>
 			    </section>
-			    <section id="step2" class="step2 ">
+			    <section id="step2" class="step2 show">
 			        <!-- <h1>Step 2:</h1> -->
 			        <h2>Create Your Flash Card Deck</h2>
 			        <p>Start building your decks</p>
@@ -68,7 +68,9 @@
 							<fieldset class="half-width retreive-cards">
 								<input type="hidden" name="data[id]" value="'.$sdfcd_fcdeck['id'].'">
 								<input type="hidden" name="data[fcd_id]" value="'.$sdfcd_fcdeck['fcd_id'].'">
-								<div class="formdiv"><label>Deck Name</label><span>Your Deck Name Here<?php'.$sd_flash_cards['deck_name'].'?></span></div>
+								<div class="formdiv"><label>Deck Name</label><span>Your Deck Name Here<?php'.$sd_flash_cards['deck_name'].'?></span></div><br>
+								<div class="formdiv"><label>Deck Name</label><span>Your Deck Name Here<?php'.$sd_flash_cards['deck_name'].'?></span></div><br>
+								<div class="formdiv"><label>Deck Name</label><span>Your Deck Name Here<?php'.$sd_flash_cards['deck_name'].'?></span><br></div><br>
 							<!-- STOPED working on tables, matching db -->
 								<!-- work on these btns -->
 								<div class="btn-option">
@@ -83,7 +85,7 @@
 							?>
 						</div>
 				</section>
-				<section id="step3" class="step3 "> <!-- show -->
+				<section id="step3" class="step3 show"> <!-- show -->
 					<!-- <h1>Step 3:</h1> -->
 					<h2>Pick Your Flash Card Decks</h2>
 					<p>You can pick one or more decks to study at a time.</p>
@@ -105,11 +107,11 @@
 					</div>
 				</section>
 				<div class="clear"></div>
-				<section id="inplay" class="play ">
+				<section id="inplay" class="play show">
 					<!-- <h1></h1> -->
 					<h2>Flash Cards Go</h2>
 					<p></p>
-					<div id="card-container" class="card-container">
+					<div id="card-container form-container" class="card-container">
 						<p id="term" class="card-term">This is a test term</p>
 						<p id="definition" class="card-definition">42</p>
 						<div class="show-answer btn-option">

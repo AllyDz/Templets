@@ -26,6 +26,7 @@ body {
 	background: #e5e5e5 url(../css_images/file.jpg) no-repeat top fixed;
 	background-size: cover;
 	text-align: center;
+	margin: 0; 
 }
 .container{
 	display: block;
@@ -136,10 +137,12 @@ span{
 }
 .form-container{
 	min-height: 435px;
-    width: 750px;
+    width: 80%;
     border: 0px solid #cec8ca;
     background: #fff;
-    margin: 0 15% 10%;
+    margin: 0 10% 10%;
+    border-radius: 10px;
+    height: 435px;
 }
 /******************************
 		BUTTON STYLES
@@ -168,16 +171,7 @@ button:hover{
 /******************************
 		FLASH CARD STYLES
 /*******************************/
-.card-container{
-	max-height: 435px;
-    max-width: 750px;
-    border: 0px solid #cec8ca;
-    border-radius: 10px;
-    margin: 0 15% 5%;
-    background: #fff;
-    width: 750px;
-    height: 435px;
-}
+.card-container{}
 .card-container p{
 	text-align: center;
     padding: 40px 20px 0;
@@ -196,15 +190,15 @@ button:hover{
 }
 <<<<<<< Updated upstream
 .options, .card-definition, .step2, .step3, .play{
-	display: none;
-}
-.options.show, .card-definition.show, .step2.show, .step3.show, .play.show{
 	display: block;
 	-webkit-transition-timeing-function:ease;
 	transition-timing-function: ease;
 	min-height: 0px;
 	max-height: auto;
 	transition: height 3s;
+}
+.show{
+	display: none;
 }
 =======
 /*.card-definition, .step2.show, .step3.show, .play.show{

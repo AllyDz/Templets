@@ -21,6 +21,7 @@ jQuery(document).ready(function(){
 	// if/else a class then do the following
 	// when event happens toggle class show/hide
 
+//SETTING UP BUTTON ACTIONS
 	//OMGOSH this would be a lot of lines script doing it this way.
 	jQuery('#save').click(function() {
 		jQuery('#options').toggleClass('show');

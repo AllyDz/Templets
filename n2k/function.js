@@ -6,26 +6,26 @@ jQuery(document).ready(function(){
 
 //onclick add class to logo and btn to change styles
 // alert("working");
-var btn1 = document.getElementById("btn1");
-var btn2 = document.getElementById("btn2");
-var btn3 = document.getElementById("btn3");
-var btn4 = document.getElementById("btn4");
-var btn = (btn1, btn2, btn3, btn4);
-btn.onclick = function myFunction() {
-    alert("you clicked");
-    if (btn == btn1){
-        document.getElementById("n2k").className = "logo1";
-    }
-    else if (btn == btn2){
-        document.getElementById("n2k").className = "logo2";
-    };
-    alert("here!");
-    //end;
-    //else if (btn[1]){
-       // document.getElementById("n2k").className = "logo2";
-    //};
-    //end;
-}
+// var btn1 = document.getElementById("btn1");
+// var btn2 = document.getElementById("btn2");
+// var btn3 = document.getElementById("btn3");
+// var btn4 = document.getElementById("btn4");
+// var btn = (btn1, btn2, btn3, btn4);
+// btn.onclick = function myFunction() {
+//     alert("you clicked");
+//     if (btn == btn1){
+//         document.getElementById("n2k").className = "logo1";
+//     }
+//     else if (btn == btn2){
+//         document.getElementById("n2k").className = "logo2";
+//     };
+//     alert("here!");
+//     //end;
+//     //else if (btn[1]){
+//        // document.getElementById("n2k").className = "logo2";
+//     //};
+//     //end;
+// }
 //alert("shit snacks");
 //document.getElementById("logo").className = "btn1"
 /*
@@ -42,7 +42,7 @@ window.onload = function() {
     function myFunction();
 }
 */
-/*
+
 
 //when clicked n2k changes to btn color
 //alert("loading");
@@ -78,7 +78,7 @@ function changeLogoHome() {
     document.getElementById("n2k").className = "logohome"
 }
 
-*/
+
 
 });
 

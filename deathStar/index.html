@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Allyson Brusstar</title>
+		<link rel="stylesheet" type="text/css" href="screen.css">
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<!--<link rel="stylesheet" type="text/css" href="css/Final.css">-->
+		<script src='http://code.jquery.com/jquery-latest.min.js'></script>
+
+		<!-- <link rel="stylesheet" href="css/reset.css"> -->
+	</head>
+
+	<body>
+		<div class="background-image"></div>
+		<section class="fixed-nav">
+			<nav>			
+				<ul>
+					<li><a href="#allyson">Allyson</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#work">Work</a></li>
+					<li><a href="#clients">Clients</a></li>
+					<li><a href="#phots">Photography</a></li>
+					<!-- <li><a href="#ed">Education</a></li> -->
+					<li><a href="#hello">Say Hello</a></li>
+					<li class="hireme"><a href="#hireme">Hire Me!</a></li>
+				</ul>
+			</nav>
+		</section>
+
+				<div class="clear"></div>
+			<section class="begining">
+				<h1>Allyson Brusstar</h1>
+			</section>
+
+		<section id="skills" class="left">
+			<p>Dis is some skills</p>
+		</section>
+		<section id="work" class="right">
+		<!-- make this section flexable 'to grow or shrink with feed needs' -->
+			<!-- If statment 'if there is feet loop throught the first 3 and show' -->
+
+			<ul>
+				<li class="feed-type">Istagram @allybeeboss</li>
+				<li class="ig-feed">Some Feed</li> <!-- show image thumbnail -->
+				<li class="ig-feed">Some Feed</li>
+				<li class="ig-feed">Some Feed</li>
+				<li class="ig-feed">Some Feed</li>
+				<li class="ig-feed">Some Feed</li>
+				<li class="ig-feed">Some Feed</li>
+				<li class="ig-feed">Some Feed</li>
+				<li class="ig-feed">Some Feed</li>
+				<li class="ig-feed">Some Feed</li>
+			</ul>
+			<!-- If statment 'if there is feet loop throught the first 3 and show' -->
+			<ul>
+				<li class="feed-type">Twitter @DJ_SnoWhite</li>
+				<li>Some Feed</li> <!-- show image thumbnail -->
+				<li>Some Feed</li>
+				<li>Some Feed</li>
+			</ul>
+			<!-- If statment 'if there is feet loop throught the first 3 and show' -->
+			<ul>
+				<li class="feed-type">Blog Need2KnowBlogger.com</li>
+				<li>Some Feed</li> <!-- show image thumbnail -->
+				<li>Some Feed</li>
+				<li>Some Feed</li>
+			</ul>
+			<!-- <p>Dis is some work</p> -->
+			<div id="contact">
+				<fieldset class="feed-type contact">
+				<input type="hidden" name="data[id]" value="'.$sdfcd_users['id'].'">
+				<div class="formdiv"><label>Email</label><input><?php'.$sdfcd_users['email'].'?></input></div>
+				<div class="formdiv"><label>Password</label><input><?php'.$sdfcd_users['password'].'?></input></div>
+				<div class="btn-option">
+					<button id="save" class="btn" type="button">Save</button>
+					<button id="enter" class="btn" type="button">Enter</button>
+				</div>
+				 		<!-- create and if statement that if save is hit to save data, if return is hit go to flash card deck... include success and error messages -->			
+					<?php $sql = "INSERT INTO sdfcd_users (
+			            `id`,
+			            `email`,
+			            `password`,						
+			          ) VALUES (
+			            '".$id."',
+			            '".$email."',
+			            '".$password."',
+			            '".$_SESSION['sdfcd_users']['id']."')"; 
+		            ?>
+		            <!-- on click it will show the respective page items (view or create deck) -->
+           	</fieldset>
+			</div>
+		</section>
+		<script src="function.js"></script>
+	</body>
+
+	<footer>
+		<!-- social and text links here -->
+	</footer>
+
+</html>

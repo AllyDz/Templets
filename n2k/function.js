@@ -1,5 +1,5 @@
 //*****one functon to rule them all
-jQuery(document).ready(function(){
+//jQuery(document).ready(function(){
 //    alert("ready");
 
 //listen for click
@@ -43,7 +43,7 @@ window.onload = function() {
 }
 */
 
-
+jQuery(document).ready(function(){
 //when clicked n2k changes to btn color
 //alert("loading");
 //listen for click

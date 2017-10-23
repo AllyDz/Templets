@@ -1,6 +1,28 @@
 *{
     font-family:futura;
 }
+/*********************
+GENERAL STYLES START
+**********************/
+.left{
+    float: left;
+    width: 50%;
+    height: 1050px;
+    background-color: rgba(0, 0, 0, .2);
+    margin: 140px 40px 0 0;
+    padding: 0 15px;
+}
+.right{
+    float: left;
+    width: 30%;
+    height: 1050px;
+    background-color: rgba(0, 0, 0, .2);
+    margin-top: 70px;
+    padding: 0 15px;
+}
+/*********************
+LOGO NAV STYLES START
+**********************/
 #logo > div{
     margin:50px 0 0;
     float:left;
@@ -32,6 +54,9 @@ li{
     margin:10px;
     folat:right;
 }
+/*********************
+BUTTON STYLES START
+**********************/
 .btn{
     background:black;
     border-radius:5px;
